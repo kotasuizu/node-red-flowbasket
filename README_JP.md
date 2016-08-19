@@ -7,7 +7,7 @@ Node-REDで作成したフローをバックアップや履歴管理するため
 
 このNodeを使用するためには、Node-REDアプリケーションのpackage.json dependenciesに以下を追加し、再アップロードしてください。
 
-- "node-red-flowbasket":"git+https://bitbucket.org/KotaSuizu/node-red-flowbasket"
+- "node-red-flowbasket":"0.0.x"
 
 ### Bluemixの場合、package.jsonに追加する手順は以下となります
 1. BluemixのNode-RED用Runtimeより、Starter codeをダウンロードする
@@ -22,16 +22,16 @@ Node-REDで作成したフローをバックアップや履歴管理するため
 ![SearchIndes](https://db.tt/PaI16Y3u)
 
 ### toBackup Nodeの設定は以下となります
-- SourceConf : Node-REDの各種設定が保存されているCloudantDBの接続情報を設定する
-- TargetConf : 上記DB内に格納されているFlow情報をバックアップするCloudantDBの接続情報を設定する
+- SourceCloudant : Node-REDの各種設定が保存されているCloudantDBの接続情報を設定する
+- TargetCloudant : 上記DB内に格納されているFlow情報をバックアップするCloudantDBの接続情報を設定する
 - AppName : SourceConfに設定したCloudantDBに設定を保存しているNode-REDのアプリケーション名を設定する
 - TargetDB : Floe情報をバックアップするCloudantDBのDB名を設定する
 
 ### toRestore Nodeの設定は以下となります
-- SourceConf : Node-REDの各種設定が保存されているCloudantDBの接続情報を設定する
-- TargetConf : 上記DB内に格納されているFlow情報をバックアップするCloudantDBの接続情報を設定する
-- AppName : SourceConfに設定したCloudantDBに設定を保存しているNode-REDのアプリケーション名を設定する
-- TargetDB : Floe情報をバックアップするCloudantDBのDB名を設定する
+- RestoreCloudant : Node-REDの各種設定が保存されているCloudantDBの接続情報を設定する
+- BackupCloudant : Flow情報をバックアップしたCloudantDBの接続情報を設定する
+- AppName : RestoreCloudantに設定したCloudantDBに設定を保存しているNode-REDのアプリケーション名を設定する
+- TargetDB : Flow情報をバックアップしたCloudantDBのDB名を設定する
 
 ## Copyright and license
 
