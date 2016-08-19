@@ -1,0 +1,24 @@
+{
+  "name": "node-red-flowbasket",
+  "version": "0.0.2",
+  "description": "A Node-RED node to backup/restore the node-red-flow to/from Cloudant",
+  "dependencies": {
+    "request": ">=2.40.0"
+  },
+  "keywords": [
+    "node-red",
+    "cloudant",
+    "bluemix"
+  ],
+  "node-red": {
+    "nodes": {
+      "flowbasket": "flowbasket.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nkolban/node-red-contrib-couchdb"
+  },
+  "author": "Kota Suizu",
+  "license": "MIT"
+}
