@@ -156,14 +156,14 @@ module.exports = function(RED) {
             _docSelectByOrgRev(node.fbTargetConfig, node.fbTargetDbName, orgRev, function(err, response, body) {
                 if (err || response.statusCode !== 200) {
                     console.log(err);
-                    node.error("Failed to select target document. StatusCode = " + response.statusCode);
+                    node.error("Failed to select by OrgRev backup document. StatusCode = " + response.statusCode);
                 } else {
                     var target_id = body.rows[0].id;
 
                     _docSelectByID(node.fbTargetConfig, node.fbTargetDbName, target_id, function(err, response, body) {
                         if (err || response.statusCode !== 200) {
                             console.log(err);
-                            node.error("Failed to select target document. StatusCode = " + response.statusCode);
+                            node.error("Failed to select by id backup document. StatusCode = " + response.statusCode);
                         } else {
 
                             var restore_flow = body.flow;
@@ -182,17 +182,17 @@ module.exports = function(RED) {
                                     _docInsert(node.fbSourceConfig, "nodered", restore_payload, function(err, response, body) {
                                         if (err || response.statusCode !== 201) {
                                             console.log(err);
-                                            node.error("Failed to insert document. StatusCode = " + response.statusCode);
+                                            node.error("Failed to restore document. StatusCode = " + response.statusCode);
                                         } else {
                                             // 正常終了　バックアップに成功
                                             var sendmsg = {
                                                 "statusCode": 201,
-                                                "message": "Succeeded to store the flow document.",
+                                                "message": "Succeeded to restore the flow document.",
                                                 "body": body
                                             };
                                             msg.payload = sendmsg;
                                             node.send(msg);
-                                            node.log(RED._('Succeeded to store the flow document.'));
+                                            node.log(RED._('Succeeded to restore the flow document.'));
                                         }
                                     });
                                 }

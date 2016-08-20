@@ -8,6 +8,8 @@
   "keywords": [
     "node-red",
     "cloudant",
+    "backup",
+    "restore",
     "bluemix"
   ],
   "node-red": {

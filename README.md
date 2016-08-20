@@ -1,6 +1,6 @@
 # node-red-flowbasket
 
-A Node-RED node to backup/restore the node-red-flow to/from Cloudant.
+A Node-RED node to backup/restore the node-red-flow to/from Cloudant.  
 Mainly assumes the running at Node-RED on the IBM Bluemix.
 
 ## How to Install
@@ -33,6 +33,6 @@ npm install node-red-flowbasket
 
 ## Copyright and license
 
-Copyright (c) 2016 Kota Suizu
-Released under the MIT license
+Copyright (c) 2016 Kota Suizu  
+Released under the MIT license  
 http://opensource.org/licenses/mit-license.php

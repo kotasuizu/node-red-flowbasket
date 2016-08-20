@@ -1,6 +1,6 @@
 # node-red-flowbasket
 
-Node-REDで作成したフローをバックアップや履歴管理するための、Node-RED用のNodeです。
+Node-REDで作成したフローをバックアップや履歴管理するための、Node-RED用のNodeです。  
 主にIBM Bluemix上のNode-REDでの稼働を想定しています。(他でも動くと思いますが、、、)
 
 ## How to Install
@@ -37,6 +37,6 @@ Node-REDで作成したフローをバックアップや履歴管理するため
 
 ## Copyright and license
 
-Copyright (c) 2016 Kota Suizu
-Released under the MIT license
+Copyright (c) 2016 Kota Suizu  
+Released under the MIT license  
 http://opensource.org/licenses/mit-license.php
