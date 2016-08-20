@@ -3,7 +3,7 @@
 Node-REDで作成したフローをバックアップや履歴管理するための、Node-RED用のNodeです。
 主にIBM Bluemix上のNode-REDでの稼働を想定しています。(他でも動くと思いますが、、、)
 
-## Quick Start
+## How to Install
 
 このNodeを使用するためには、Node-REDアプリケーションのpackage.json dependenciesに以下を追加し、再アップロードしてください。
 
@@ -14,6 +14,8 @@ Node-REDで作成したフローをバックアップや履歴管理するため
 2. DLしたアーカイブ内にあるpackage.jsonを開き、dependenciesに上記のエントリーを追加し保存する
 3. Bluemix Runtimeにpushする(cf push <Application Name>)
 4. Node-REDのWeb画面を開き、Node一覧のBackup_Restoreセクション内に、FlowBasket toBackup と FlowBasket toRestore が追加されたことを確認する
+
+## How to Use
 
 ### Nodeを利用する前に以下準備が必要です
 1. Flow情報を保存するCloudantサービスを作成する
