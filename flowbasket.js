@@ -59,6 +59,8 @@ module.exports = function(RED) {
                         "q": "org_rev: " + body._rev
                     };
 
+                    var returnOrgRev = body._rev;
+
                     var getCurrentTime = function() {
                         var date = new Date();
                         date.setHours(date.getHours() + 9);
@@ -115,6 +117,7 @@ module.exports = function(RED) {
                                     var sendmsg = {
                                         "statusCode": 201,
                                         "message": "Succeeded to store the flow document.",
+                                        "org_rev": returnOrgRev,
                                         "body": body
                                     };
                                     msg.payload = sendmsg;
