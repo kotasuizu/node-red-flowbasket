@@ -1,6 +1,6 @@
 {
   "name": "node-red-flowbasket",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Node-RED node to backup/restore the node-red-flow to/from Cloudant",
   "dependencies": {
     "request": ">=2.40.0"
